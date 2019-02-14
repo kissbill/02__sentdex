@@ -1,0 +1,350 @@
+-------------------------
+01 | Csutortok
+-------------------------
+--> #ToDo #Automat #UDS #NeedToCheck
+	-UDS
+		-emberektol infot kiszedni
+		-kimasolni kikrol , mirol beszel Thor
+	-FLASH 
+		-baic view-ban vannak cuccok rola
+		cmd, read me . pdf . pkg
+		+
+-------------------------
+02 | Pentek
+-------------------------
+--> #ToDo #Polarion
+		-kedvencek hozzaadasa
+		-Thorsten minta
+				-issuek pl
+				+
+--> #ToDo #Git
+		-reggel automatan fusson le
+		+
+
+--> #ToDo #Review #Link
+		'https://ecarpolarion.gplm.siemens.com/polarion/#/project/INV_VER/workitem?id=INV_VER-291'
+		'https://ecarpolarion.gplm.siemens.com/polarion/#/project/INV_VER/wiki/57%20Guidelines/Review%20Process%20of%20SW%20Test%20Cases'
+			-SW_TestCase_Specification_Checklist ezen kell vegig menni
+			- live doksi :
+				-'https://ecarpolarion.gplm.siemens.com/polarion/#/project/VW_MEB_Inverter/wiki/30 Verification and Validation/SWTS_BasicFunctionality'
+					-es erre vannak ralinkelve a kesz review-zet TC-k [lego kocka]
+						'https://ecarpolarion.gplm.siemens.com/polarion/#/project/VW_MEB_Inverter/workitem?id=VWMEB-Inv-48177'
+						+
+--> #ToDo #ModeManager #Offset #Link
+	-hogy megy ? 
+		https://ecarpolarion.gplm.siemens.com/polarion/#/project/VW_MEB_Inverter/workitem?id=VWMEB-Inv-47474
+			-nightly ki keri ? megkapja ? allit valamit a tc ?
+			+
+-------------------------
+05 | Hetfo
+-------------------------
+--> #Defect
+	-XCP CAN melyiken megy
+		- CANape , nem jelenik meg a log, hol van ?
+			-nem tudja : tib, berc
+			-Kiss Zsolt hangouts waiting
+		-dbc file beillesztese es meres
+			ezzel meg lehet nezni alt+enter 
+			properties
+			+
+
+--> #Automat
+	-idopont : 13:00
+	-elkezdtem kiszedni az infokat
+		tulsagosan valtozatos ahhoz Eszter egyik UDS-e ahhoz 
+		hogy automatzani lehessen
+		+
+--> #Nightly #P215 #P220_09 #D210_rb0010
+	-SPO\ASC : alap TC elvaras SAFE_ST_ASC
+			-MINUS -> SAFE_ST_SPO varok el , TC Failed
+			-PLUS -> SAFE_ST_ASC varok el, TC Passed
+	-Nachlauf mode
+			-MINUS Nachlauf_mode varok el , TC Failed
+					Preapere_SLEEP_Mode
+			-PLUS Nachlauf_mode varok el , TC Passed
+					-Nachlauf_mode is jon
+					+
+-------------------------
+06 | Kedd
+-------------------------
+--> #MiniHIL #LogIn
+			ecartead0
+			szeretemAZAD001esmigraciot001
+			+
+
+--> #Defect #DEMevent
+	https://ecarpolarion.gplm.siemens.com/polarion/redirect/project/VW_MEB_Inverter/workitem?id=VWMEB-Inv-59129
+	-balogh marton
+	-DEM eventek
+	-fault matrix csekk
+		INV_GATE_DRVR_U_TOP_HWP, INV_GATE_DRVR_U_BOT_HWP, 
+		INV_GATE_DRVR_V_TOP_HWP, INV_GATE_DRVR_V_BOT_HWP,
+	  INV_GATE_DRVR_W_TOP_HWP, INV_GATE_DRVR_W_BOT_HWP
+	  +
+--> #ToDo #ecar 
+	-valeo gepek , korlevel
+	+
+--> #ECUtest #dongle
+	-temp folder
+	-frissitve
+		-miskoka is kell-e dongle
+		+
+--> #ToDo #Polarion #Xlsx
+	-excel file frissitese
+		-feltolteni
+		-live doksi
+		+		
+-------------------------
+07 | Szerda
+-------------------------
+--> #ModeManager #ToDo
+VWMEB-Inv-42883 - MM: Tq control to Standby
+		-rossz a test steps
+		+
+--> #Nightly #Automat #ToDo
+	-Thosrten
+		nightly darabolasa
+			-zsolt legyen benne
+		-ltc , shchindler jenkins level
+		+
+--> #ToDo #Learning
+	video felvetelek
+	-CANape
+		-frissen kellene osszerakni a configot
+		-a2l-ben kikeresheto az XCP milyen csatornan megy
+	-CANoe 
+		-latszik a trace-nel ha XCP-n merunk a CANape-val, megjelenik CANoe trace-ben
+		+
+-------------------------
+12 | Hetfo
+-------------------------
+
+-->#MiniHIL #GITrepo #ToDo 
+		-TBC TCF 
+			-relativ utvonal kell, hogy sajat git repot lemasolva tudjuk hasznalni
+				fix utvonnallal megy csak jelenleg
+		-Rico ha neki nem megy, Olvier
+		+
+
+--> #Defect #Nmh
+	-VWMEB-Inv-58380 - IAV NMH-Test: 5.2.1.3.1 - Falsches Bitsetzen im Nachlauf aufgrund Diagnose Aktiv
+		-Berc \ Soma feladata lett
+		- CANoe / diagnosztik bitek lehetnek 0 - 1 - 2 - 3 , ezek kozul az 1 es 0 nem jott be
+			a LAH alapjan, az 1 a KL15 , 2 a diagnosztik uzenetek, a 3 ha mind2 mukodik egyidoben
+			0 ha KL15 Off es 1 perc varakozas, leall a Diagnosztik .
+			+
+
+--> #KnowHow #DTC #StatusMask
+	-pelda , elolvasni , megerteni
+		D.2 DTCStatusMask and statusOfDTC bit definitions
+		D.2.1 Convention and definition
+		+
+-------------------------
+13 | Kedd
+-------------------------
+--> #DataBase
+		_evo_HW_beszerzes_
+		-CU boardok 6 db van, 5 van meg
+			-level kikuldve Aginak
+			+
+
+--> #Requirment #ModeManager
+	-VWMEB-Inv-59887 - EM_Fehler_Notabschaltung CAN signal value
+		-Csollak utana kerdezzet ,Zebeleinnel
+		+
+
+--> #Defect #ActiveDischarge
+	-Thorsen pkg [ 50099 ] [BasicFunctionTest][Misc]
+	-Report csekk
+		-test report folder
+	-Tq kerese 
+	+
+
+-------------------------
+14 | Szerda
+-------------------------
+
+-->#ModeManager #Tc 
+	-Free Run -> Fault missing
+	- uj TC HV elvesszuk a TQ le megy 0 es Standby
+	+
+
+
+-------------------------
+15 | Csutortok
+-------------------------
+--> #KnowHow #ResolverOffset
+	-NVM -> resolver offset 
+		-elallitodik atirodik az NVM-ben akkor az csak az ECU kikapcsolasakor fog ervenyesulni
+		mert akkor olvasabba a configot a resolver offset-re.
+	+
+
+
+-------------------------
+20 | Kedd
+-------------------------
+
+-->#MiniHIL #Nightly
+	-reportokat arrol a hilrol leszedni amelyiken futott a Nightly
+		-pl 36 
+		+
+
+-------------------------
+21 | Szerda
+-------------------------
+
+--> #ToDo #ModeManager #Tc #Package
+	-kivenni innen amit lehet 
+	D:\ECU FOLDER\Workspace\40_Packages\10_Library\00_Common\40_ModeManager
+	+
+
+--> #Requirment
+	REQ csinalni
+	+
+
+
+-------------------------
+ 22 | Csutortok
+-------------------------
+--> #ToDo #ModeManager #NeedToCheck #CalibMode
+	-Calib offset 
+		-van ra package ?
+			- Global PreCondi-ban 
+				-Calib_Rslv_offset
+	+
+
+--> #ToDo #ModeManager #ActiveDischarge
+	-SPO bent van , csekkolni kell 
+		-Thorsen esete fentebb van ra pkg name is 
+		D:\ECU FOLDER\Workspace\40_Packages\10_Library\00_Common\110_Misc
+	+
+
+--> #NeedToCheck #GITrepo 
+	-lemaradt git csekkek a gmail-bol
+		-Pl : Preparation of delivery VW-MEB-P221-0015-20180216 - Matthias RODLER 
+			-221_015 SW-nek a DCM file-aira volt itt git parancs peldaul
+			-korabban is kuldott mar ilyen levelet
+	+
+
+-------------------------
+ 23 | Pentek
+-------------------------
+--> #ToDo #Nightly #NameConvetion
+	_2018-02-22_225028__P221-0015-20180216 
+	= SET | mode | =
+	= CHECK | Fault mode |  =
+	+
+
+--> #KnowHow #MiniHIL #CANFlash
+	-Mikor CANFlash-el flasheltek, úgy hogy felteszitek az Customer Bootloadert és a APP-t, 
+	 akkor meg lehet nézni, hogy éppen melyik részt teszi fel a kettő közül.
+	 dSpace-ben a "Power supply"-nál.
+		1.) Ha > 800 mA -> APPL-t teszi fel épp
+		2.) HA < 250 mA -> BL-t teszi fel épp
+			Ezek nem a pontos értékek, csak hozzávetőlegesen kaptuk meg.
+	+
+
+
+-------------------------
+ 26 | Hetfo
+-------------------------
+
+--> #Automat #Meeting #Video
+	-07:40 Diagra flash tema
+	+
+--> #DataBase #CuBoard
+	-a dobozos CU boardok csekkolva az DataBase-bol
+		-level zsoltnak , ferenci, 		
+	+
+--> #MiniHIL 
+	-16 GB bele lett rakva
+		-fotozni kene a gep bekoteset
+		mi hol van, pl 3 db enthernet kabel
+		+
+--> #Regession #Sw #Letter #BaseMinus #ToDo #D220-0018
+	-VW_MEB\RollingBuild\VW-MEB-D220-0018-20180223 
+	-ugyanazokat a TC-ket vegyük bele amik a P220-as BasePlus regresszióban voltak benne.
+	+
+
+--> #BasePlus #BaseMinus #Directiva #ToDo
+	-plus Tc-ket atrakni BaseMinus-ra [obsolete-eket]
+		-linkelni az egyik a masikra
+			-voros lesz az a sor ahol a valtozas csak az egyikben tortenik
+		-requirment-eket is
+		-egyedi nev kell a minus-ra
+	-package ami lehet -> plus, minus, common
+		-kulon folder van mind3-ra
+			-common fut le, es az donti el, hogy plus vagy minus ami
+			le kell fusson
+			+ 
+--> #MiniHIL #Letter #BasePlus #Odis
+	-ODIS installed on HiL-036
+	-Markus 
+	+
+
+--> #Letter #KnowHow #ECUtest #ToDo
+	-ECU-TEST Trace Analysis - how to check your calculated signals
+		-Markus
+-------------------------
+ 27 | Kedd
+-------------------------
+--> #Regession #Defect #BaseMinus #D220-0018
+	-van-e
+	-Berc-en van, Attilan van
+	+
+
+--> #Regession #BaseMinus #D220-0018 #Letter #Link
+	-@Nico: Please create a branch according to Base+ process as Helene recommended
+		P:\VW_MEB\RollingBuild\VW-MEB-D220-0024-20180227 
+	-@Niranjan, Richard, Doris
+		Please create your binaries for the new() release candidate on the branch in GIT
+		ODX, PDX, DCM
+	-@Aimo:
+		Please upload your test report in word here for review:
+		https://drive.google.com/drive/folders/1dWrfU6CQ3T1UDuQsohzB7esmfsFjiAqh
+	@all:
+		Give your input to know issues and restrictions
+		See Q215 release note chapter 2.9 P:\VW_MEB\Release\VW_MEB_Q215_0001_20180205\Documentation
+		+
+--> #AddWorkFlow
+	-ezzel a hash-el van ellatva ha valami uj folyamatot , otletet vittem be
+		-pl gmail --> Minus subfolder 
+	-Letter hastag --> ami levelben volt es fontos a kesobiekben
+		-cimmel, kuldovel ellatva bekerul ide majd szepen hastag-elve
+			-pl: Cim:	TeA: Test package reviews
+				 Kuldo: Thorsten
+		+
+
+--> #Jenkins #KnowHow #Letter #Link
+	-Jenkins: Move the GCI (Smoketest) to another HIL system
+		-Thorsten
+	-'https://ecarpolarion.gplm.siemens.com/polarion/?logout=true#/project/INV_VER/wiki/57%20Guidelines/
+		Introduction%20to%20Jenkins?shortcut=favorites/Introduction%20to%20Jenkins'
+		+
+--> #MiniHIL #KnowHow #Git #Letter
+	-budapest base plus minihil infok
+		-Attila
+	-Git workflow --> pull rebase --> pull pedig mindenki a sajat gepen
+	- X:\TestTeamTasks\VW\HIL
+		-fel lett mountolva 
+		+
+--> #Review #Letter #Link #Automat
+	-TeA: Test package reviews
+		-Thorsten
+	-here the draft of the review protocol (including a checklist) for test package reviews.
+		'\40_Packages\20_Testcases\10_VW_MEB\10_SWIT\50_BFT\TeA_ReviewProtocol.xlsx'
+		
+
+-------------------------
+ 28 | Szerda 
+-------------------------
+
+-->
+
+
+
+
+Hetfo Kedd Szerda Csutortok	Pentek	CANape CANoe ECUtest Git Polarion ToDo Automat
+Review 	Offset	ModeManager	Defect Meeting KnowHow Xlsx Regession
+ 
+
